@@ -56,24 +56,12 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="layui/layui.all.js"></script>
-
-<script type="text/html" id="demo">
-    <div>hello world</div>
-</script>
 <script>
-    console.log($('#demo').html());
     var url = window.location.href;
     var router;
     if (url.indexOf("#/") > -1) {
-        if (url.indexOf('?') > -1) {
-            router=url.substring(url.indexOf('#/') + 2,url.indexOf('?'));
-        } else {
-            router=url.substring(url.indexOf('#/') + 2);
-        }
-        if(router.indexOf('.html')===-1){
-            router=router+'.html';
-        }
-        $('#iframeParent').attr('src',router);
+        router=url.substring(url.indexOf('#/') + 2);
+        $('#iframeParent').attr('src','html/'+router);
     }
     $('.loginNameDiv').click(function () {
         if ($('.dialogMenu').css('display') === 'block') {
