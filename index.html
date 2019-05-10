@@ -57,12 +57,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="layui/layui.all.js"></script>
 <script>
-    var url = window.location.href;
-    var router;
-    if (url.indexOf("#/") > -1) {
-        router=url.substring(url.indexOf('#/') + 2);
+    /**
+     * 类Vue路由设计，如不需要可删除
+     */
+    function initRouter(){
+        var url = window.location.href;
+        var router;
+        if (url.indexOf("#/") > -1) {
+            router=url.substring(url.indexOf('#/') + 2);
+        }else{
+            router='#/';
+        }
         $('#iframeParent').attr('src','html/'+router);
     }
+    initRouter();
     $('.loginNameDiv').click(function () {
         if ($('.dialogMenu').css('display') === 'block') {
             $('.dialogMenu').css('display', 'none');
