@@ -9,6 +9,7 @@
     <title>layuiAdmin</title>
 </head>
 <body>
+<!--上方标题栏-->
 <div class="parentTop">
     <a href="#" class="appName">LayuiAdmin</a>
     <div class="loginNameDiv">
@@ -20,6 +21,7 @@
     </div>
 </div>
 
+<!--左侧菜单-->
 <div class="leftMenu">
     <ul class="layui-nav layui-nav-tree"
         lay-filter="test">
@@ -43,10 +45,12 @@
         <li class="layui-nav-item"><a href="">大数据</a></li>
     </ul>
 </div>
+<!--主要内容区-->
 <div class="parentMain">
     <iframe id="iframeParent"></iframe>
 </div>
 
+<!--设置弹框-->
 <div class="dialogMenu">
     <div class="item">修改密码</div>
     <div class="item">退出</div>
@@ -71,6 +75,7 @@
         $('#iframeParent').attr('src','html/'+router);
     }
     initRouter();
+    //显示设置弹框
     $('.loginNameDiv').click(function () {
         if ($('.dialogMenu').css('display') === 'block') {
             $('.dialogMenu').css('display', 'none');
