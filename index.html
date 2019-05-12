@@ -69,10 +69,11 @@
         var router;
         if (url.indexOf("#/") > -1) {
             router=url.substring(url.indexOf('#/') + 2);
-        }else{
-            router='#/';
+            if(router===''){
+                router='index.html';
+            }
+            $('#iframeParent').attr('src','html/'+router);
         }
-        $('#iframeParent').attr('src','html/'+router);
     }
     initRouter();
     //显示设置弹框

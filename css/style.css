@@ -78,3 +78,48 @@
     height: 98%;
     border-width:0;
 }
+
+.topGrid{
+    font-size: 0;
+}
+
+.topGrid .itemWrapper{
+    width: 25%;
+    display: inline-block;
+}
+
+.topGrid .item{
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.topGrid .item .name{
+    margin-bottom: 10px;
+}
+
+.topGrid .item .number{
+    font-size: 30px;
+}
+
+.topGrid .itemWrapper:nth-child(1) .item{
+    background-color: #1BC98E;
+}
+
+.topGrid .itemWrapper:nth-child(2) .item{
+    background-color: #E64758;
+}
+
+.topGrid .itemWrapper:nth-child(3) .item{
+    background-color: #9F85FF;
+}
+
+.topGrid .itemWrapper:nth-child(4) .item{
+    background-color: #E5D936;
+}
+
+#mountNode{
+    margin-top: 20px;
+}
