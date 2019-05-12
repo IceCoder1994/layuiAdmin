@@ -51,6 +51,7 @@
     width: 130px;
     position: absolute;
     top: 60px;
+    background-color: white;
     right: 0;
     border: 1px solid #dddddd;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.12);
