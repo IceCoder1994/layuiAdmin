@@ -75,6 +75,7 @@
             $('#iframeParent').attr('src','html/'+router);
         }else{
             $('#iframeParent').attr('src','html/index.html');
+            history.replaceState(null,null,'#/');
         }
     }
     initRouter();
