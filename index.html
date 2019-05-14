@@ -27,15 +27,15 @@
         lay-filter="test">
         <li class="layui-nav-item"><a href="#/">首页</a></li>
         <li class="layui-nav-item layui-nav-itemed">
-            <a href="javascript:;">默认展开</a>
+            <a>默认展开</a>
             <dl class="layui-nav-child">
-                <dd><a href="javascript:;">选项1</a></dd>
-                <dd><a href="javascript:;">选项2</a></dd>
-                <dd><a href="">跳转</a></dd>
+                <dd><a>选项1</a></dd>
+                <dd><a>选项2</a></dd>
+                <dd><a>跳转</a></dd>
             </dl>
         </li>
         <li class="layui-nav-item">
-            <a href="javascript:;">解决方案</a>
+            <a>解决方案</a>
             <dl class="layui-nav-child">
                 <dd><a href="">移动模块</a></dd>
                 <dd><a href="">后台模版</a></dd>
@@ -96,8 +96,10 @@
         }
         //地址栏修改不刷新的解决方案
         $('a').click(function () {
-            window.location.href=$(this).attr('href');
-            window.location.reload();
+            if($(this).attr('href')){
+                window.location.href=$(this).attr('href');
+                window.location.reload();
+            }
         });
     }
 
