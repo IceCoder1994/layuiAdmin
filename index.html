@@ -25,6 +25,7 @@
 <div class="leftMenu">
     <ul class="layui-nav layui-nav-tree"
         lay-filter="test">
+        <li class="layui-nav-item"><a href="#/">首页</a></li>
         <li class="layui-nav-item layui-nav-itemed">
             <a href="javascript:;">默认展开</a>
             <dl class="layui-nav-child">
@@ -41,7 +42,7 @@
                 <dd><a href="">电商平台</a></dd>
             </dl>
         </li>
-        <li class="layui-nav-item"><a href="">产品</a></li>
+        <li class="layui-nav-item"><a href="index.html#/table.html">表格</a></li>
         <li class="layui-nav-item"><a href="">大数据</a></li>
     </ul>
 </div>
@@ -52,11 +53,27 @@
 
 <!--设置弹框-->
 <div class="dialogMenu">
-    <div class="item">修改密码</div>
-    <div class="item">退出</div>
+    <div id="parentChangePassword" class="dialogMenu-item">修改密码</div>
+    <div id="parentExit" class="dialogMenu-item">退出</div>
 </div>
 </body>
 </html>
+<script type="text/html" id="dialogChangePassword">
+    <form class="dialogChangePassword">
+        <div class="formItem">
+            <label>原密码:</label>
+            <input type="password">
+        </div>
+        <div class="formItem">
+            <label>新密码:</label>
+            <input type="password">
+        </div>
+        <div class="formItem">
+            <label>确认密码:</label>
+            <input type="password">
+        </div>
+    </form>
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="layui/layui.all.js"></script>
@@ -64,20 +81,26 @@
     /**
      * 类Vue路由设计，如不需要可删除
      */
-    function initRouter(){
+    function initRouter() {
         var url = window.location.href;
         var router;
         if (url.indexOf("#/") > -1) {
-            router=url.substring(url.indexOf('#/') + 2);
-            if(router===''){
-                router='index.html';
+            router = url.substring(url.indexOf('#/') + 2);
+            if (router === '') {
+                router = 'index.html';
             }
-            $('#iframeParent').attr('src','html/'+router);
-        }else{
-            $('#iframeParent').attr('src','html/index.html');
-            history.replaceState(null,null,'#/');
+            $('#iframeParent').attr('src', 'html/' + router);
+        } else {
+            $('#iframeParent').attr('src', 'html/index.html');
+            history.replaceState(null, null, '#/');
         }
+        //地址栏修改不刷新的解决方案
+        $('a').click(function () {
+            window.location.href=$(this).attr('href');
+            window.location.reload();
+        });
     }
+
     initRouter();
     //显示设置弹框
     $('.loginNameDiv').click(function () {
@@ -87,5 +110,20 @@
             $('.dialogMenu').css('display', 'block');
         }
 
-    })
+    });
+    //显示修改密码弹框
+    $('#parentChangePassword').click(function () {
+        layer.open({
+            type: 1,
+            title: '修改密码',
+            content: $('#dialogChangePassword').html(), //这里content是一个普通的String
+            btn: ['确定', '取消'],
+            yes: function (index, layero) {
+
+            },
+            btn2: function (index, layero) {
+                //return false 开启该代码可禁止点击该按钮关闭
+            }
+        });
+    });
 </script>

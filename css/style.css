@@ -59,7 +59,7 @@
     display: none;
 }
 
-.dialogMenu .item{
+.dialogMenu .dialogMenu-item{
     padding: 15px 0;
     text-align: center;
     border-bottom: 1px solid #dddddd;
@@ -123,4 +123,23 @@
 
 #mountNode{
     margin-top: 20px;
+}
+
+.dialogChangePassword{
+}
+
+.dialogChangePassword .formItem{
+    padding: 15px;
+}
+
+.dialogChangePassword .formItem label{
+    width: 70px;
+    display: inline-block;
+}
+
+.dialogChangePassword .formItem input{
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
 }
