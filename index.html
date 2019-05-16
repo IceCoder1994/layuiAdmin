@@ -59,25 +59,36 @@
 </body>
 </html>
 <script type="text/html" id="dialogChangePassword">
-    <form class="dialogChangePassword">
-        <div class="formItem">
-            <label>原密码:</label>
-            <input type="password">
-        </div>
-        <div class="formItem">
-            <label>新密码:</label>
-            <input type="password">
-        </div>
-        <div class="formItem">
-            <label>确认密码:</label>
-            <input type="password">
-        </div>
+    <form class="layui-form" id="dialogChangePasswordForm" style="margin-top:30px;padding-right:30px;">
+        <div class="layui-form-item">
+            <label class="layui-form-label">原密码</label>
+            <div class="layui-input-block">
+              <input type="password" name="password"
+              placeholder="请输入原密码" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">新密码</label>
+            <div class="layui-input-block">
+              <input type="password" name="newPassword"
+            placeholder="请输入新密码" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">确认密码</label>
+            <div class="layui-input-block">
+              <input type="password" name="okPassword" 
+              placeholder="请重复输入密码" class="layui-input">
+            </div>
+          </div>
     </form>
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="layui/layui.all.js"></script>
+<script src="js/utils.js"></script>
 <script>
+    
     /**
      * 类Vue路由设计，如不需要可删除
      */
@@ -120,8 +131,14 @@
             title: '修改密码',
             content: $('#dialogChangePassword').html(), //这里content是一个普通的String
             btn: ['确定', '取消'],
+            success:function(index,layero){
+                $('#dialogChangePasswordForm').submit(function(e){
+                    console.log(formArray2Data($(this).serializeArray()));
+                    return false;
+                })
+            },
             yes: function (index, layero) {
-
+                $('#dialogChangePasswordForm').submit();
             },
             btn2: function (index, layero) {
                 //return false 开启该代码可禁止点击该按钮关闭
