@@ -30,10 +30,10 @@
     {{#  } }}
 </script>
 <script type="text/html" id="addDialog">
-    <form class="layui-form" action="">
+    <form class="layui-form" action="" style="padding: 20px;">
         <div class="layui-form-item">
             <label class="layui-form-label">用户名</label>
-            <div class="layui-input-block">
+            <div class="layui-input-inline">
                 <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input">
             </div>
         </div>
@@ -46,7 +46,7 @@
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">选择框</label>
-            <div class="layui-input-block">
+            <div class="layui-input-inline">
                 <select name="city" lay-verify="required">
                     <option value=""></option>
                     <option value="0">北京</option>
@@ -84,20 +84,15 @@
                 <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
             </div>
         </div>
-        <div class="layui-form-item">
-            <div class="layui-input-block">
-                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
-                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-            </div>
-        </div>
     </form>
 </script>
 <script src="../js/jquery.min.js"></script>
 <script src="../layui/layui.all.js"></script>
 <script>
-    layui.use(['table', 'layer'], function () {
+    layui.use(['table', 'layer','form'], function () {
         window.table = layui.table;
         window.layer = layui.layer;
+        window.form=layui.form;
         mounted();
     });
 
@@ -133,12 +128,11 @@
                     layer.open({
                         type: 1,
                         title: '添加',
+                        area:['50%','70%'],
                         content: $('#addDialog').html(), //这里content是一个普通的String
                         btn: ['确定', '取消'],
                         success: function (index, layero) {
-                            layui.use('form', function(){
-                                window.form = layui.form;
-                            });
+                            form.render();
                         },
                         yes: function (index, layero) {
 
