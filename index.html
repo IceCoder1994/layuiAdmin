@@ -90,6 +90,12 @@
 <script src="js/utils.js"></script>
 <script>
 
+    layui.use(['layer','form'],function () {
+        window.layer=layui.layer;
+        window.form=layui.form;
+        mounted();
+    });
+
     /**
      * 类Vue路由设计，如不需要可删除
      */
@@ -115,51 +121,56 @@
         });
     }
 
-    initRouter();
-    //显示设置弹框
-    $('.loginNameDiv').click(function () {
-        if ($('.dialogMenu').css('display') === 'block') {
-            $('.dialogMenu').css('display', 'none');
-        } else {
-            $('.dialogMenu').css('display', 'block');
-        }
+    function mounted() {
+        initRouter();
+        //显示设置弹框
+        $('.loginNameDiv').click(function () {
+            if ($('.dialogMenu').css('display') === 'block') {
+                $('.dialogMenu').css('display', 'none');
+            } else {
+                $('.dialogMenu').css('display', 'block');
+            }
 
-    });
-    //退出登录
-    $('#parentExit').click(function () {
-        $('.dialogMenu').css('display', 'none');
-        layer.open({
-            type: 1,
-            content: `<div style="padding: 20px;">是否退出</div>`,
-            btn:["确定退出","暂不退出"],
-            yes:function (index, layero) {
-                //退出
-            },
-            btn2:function (index,layero) {
-                //return false 开启该代码可禁止点击该按钮关闭
-            }
         });
-    });
-    //显示修改密码弹框
-    $('#parentChangePassword').click(function () {
-        $('.dialogMenu').css('display', 'none');
-        layer.open({
-            type: 1,
-            title: '修改密码',
-            content: $('#dialogChangePassword').html(), //这里content是一个普通的String
-            btn: ['确定', '取消'],
-            success: function (index, layero) {
-                $('#dialogChangePasswordForm').submit(function (e) {
-                    console.log(formArray2Data($(this).serializeArray()));
-                    return false;
-                })
-            },
-            yes: function (index, layero) {
-                $('#dialogChangePasswordForm').submit();
-            },
-            btn2: function (index, layero) {
-                //return false 开启该代码可禁止点击该按钮关闭
-            }
+        //退出登录
+        $('#parentExit').click(function () {
+            $('.dialogMenu').css('display', 'none');
+            layer.open({
+                type: 1,
+                content: `<div style="padding: 20px;">是否退出</div>`,
+                btn:["确定退出","暂不退出"],
+                yes:function (index, layero) {
+                    //退出
+                },
+                btn2:function (index,layero) {
+                    //return false 开启该代码可禁止点击该按钮关闭
+                }
+            });
         });
-    });
+        //显示修改密码弹框
+        $('#parentChangePassword').click(function () {
+            $('.dialogMenu').css('display', 'none');
+            layer.open({
+                type: 1,
+                title: '修改密码',
+                content: $('#dialogChangePassword').html(), //这里content是一个普通的String
+                btn: ['确定', '取消'],
+                success: function (index, layero) {
+                    form.render();
+                    $('#dialogChangePasswordForm').submit(function (e) {
+                        console.log(formArray2Data($(this).serializeArray()));
+                        return false;
+                    });
+                },
+                yes: function (index, layero) {
+                    $('#dialogChangePasswordForm').submit();
+                },
+                btn2: function (index, layero) {
+                    //return false 开启该代码可禁止点击该按钮关闭
+                }
+            });
+        });
+    }
+
+
 </script>

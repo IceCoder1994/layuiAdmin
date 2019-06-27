@@ -70,7 +70,6 @@
     function mounted() {
         $('#btn_upload').click(function () {
             laytpl($('#uploadDialog').html()).render({addHtml: $('#addDivHtml').html()}, function (html) {
-                console.log(html);
                 layer.open({
                     title: '上传',
                     type: 1,

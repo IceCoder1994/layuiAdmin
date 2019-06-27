@@ -11,4 +11,6 @@ https://ice13140167960.github.io/layuiAdmin/#/main.html
 // '#/'后跟随着二级页面的文件名，由iframe渲染到内容区域
 ```
 
-## 2.新增多图上传弹框
+## 2.类vue生命周期mounted，在layui模块加载完成后将回调mounted()方法
+
+## 3.新增多图上传弹框
