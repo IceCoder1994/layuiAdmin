@@ -124,3 +124,51 @@
 #mountNode{
     margin-top: 20px;
 }
+
+.upload-image-list{
+    display: flex;
+    padding: 15px;
+}
+
+.upload-image-list .item{
+    margin-right: 8px;
+    position: relative;
+}
+
+.upload-image-list .delItem{
+    margin-right: 8px;
+    position: relative;
+    display: none;
+}
+
+.upload-image-list .item .image{
+    width: 100px;
+    height: 100px;
+}
+
+.upload-image-list .item .delete{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.upload-image-list .addDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cccccc;
+    width: 100px;
+    height: 100px;
+}
+
+.upload-image-list .addDiv img{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+}
