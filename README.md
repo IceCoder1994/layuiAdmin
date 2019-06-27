@@ -10,3 +10,5 @@ https://ice13140167960.github.io/layuiAdmin/#/main.html
 
 // '#/'后跟随着二级页面的文件名，由iframe渲染到内容区域
 ```
+
+## 2.新增多图上传弹框
