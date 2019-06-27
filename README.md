@@ -1,6 +1,6 @@
 # layuiAdmin
 ## 基于layui的后台管理模板
-### https://ice13140167960.github.io/layuiAdmin
+### 预览地址：https://ice13140167960.github.io/layuiAdmin
 ### github地址:https://github.com/ice13140167960/layuiAdmin
 
 ## 1.类Vue路由设计,用于模板语法include的替代方案
