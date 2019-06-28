@@ -14,3 +14,5 @@ https://ice13140167960.github.io/layuiAdmin/#/main.html
 ## 2.类vue生命周期mounted，在layui模块加载完成后将回调mounted()方法
 
 ## 3.新增多图上传弹框
+
+## 4.新增KindEditor富文本编辑器
