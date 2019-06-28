@@ -12,7 +12,7 @@
 </body>
 </html>
 <script type="text/html" id="richTextDialog">
-    <textarea id="editor_id" name="content" style="width: 90%;height: 300px;"></textarea>
+    <textarea id="editor_id" name="content" style="width: 90%;height: 400px;"></textarea>
 </script>
 <script src="../js/jquery.min.js"></script>
 <script src="../layui/layui.all.js"></script>
@@ -34,7 +34,7 @@
                 title: '编辑',
                 type: 1,
                 content: $('#richTextDialog').html(),
-                area: ['70%', '70%'],
+                area: ['70%', '80%'],
                 btn:['确定','取消'],
                 success :function(){
                     window.editor = K.create('#editor_id');
