@@ -21,6 +21,12 @@
                 <input id="multi-upload" name="images">
             </div>
         </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">上传图片2</label>
+            <div class="layui-input-block">
+                <input id="multi-upload2" name="images">
+            </div>
+        </div>
     </form>
 
 
@@ -44,7 +50,8 @@
                 area: ['50%', '70%'],
                 btn:['确定','取消'],
                 success:function(){
-                    multiImageUpload.init('#multi-upload')
+                    MultiImageUpload.init('#multi-upload')
+                    MultiImageUpload.init('#multi-upload2')
                 },
                 yes:function (index, layero) {
 
