@@ -128,10 +128,12 @@
 .upload-image-list{
     display: flex;
     padding: 15px;
+    flex-wrap: wrap;
 }
 
 .upload-image-list .item{
     margin-right: 8px;
+    margin-bottom: 8px;
     position: relative;
 }
 

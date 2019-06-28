@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3369d3e4-2083-4c3e-91b6-a8560f923aae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/component/multi_image_upload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/rich_editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/rich_editor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/multi_image_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/multi_image_upload.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="851">
-              <caret line="109" column="20" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="20" />
+            <state relative-caret-position="575">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
@@ -50,29 +51,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/rich_editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            <state relative-caret-position="107">
+              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="391">
-                <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+                <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/multi_image_upload.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="86" column="10" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="86" selection-end-column="10" />
+            <state relative-caret-position="345">
+              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -80,8 +81,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3220">
-              <caret line="140" column="18" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
+            <state relative-caret-position="320">
+              <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/component/multi_image_upload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -100,8 +110,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -131,18 +141,19 @@
         <option value="$PROJECT_DIR$/html/coffee.json" />
         <option value="$PROJECT_DIR$/html/coffee.js" />
         <option value="$PROJECT_DIR$/html/index.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/html/multi_image_upload.html" />
         <option value="$PROJECT_DIR$/html/tableDemo.json" />
-        <option value="$PROJECT_DIR$/html/table.html" />
         <option value="$PROJECT_DIR$/layui/lay/modules/table.js" />
         <option value="$PROJECT_DIR$/html/richeditor.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/kindeditor/themes/default/default.css" />
         <option value="$PROJECT_DIR$/kindeditor/plugins/table/table.js" />
         <option value="$PROJECT_DIR$/kindeditor/kindeditor-all-min.js" />
-        <option value="$PROJECT_DIR$/html/rich_editor.html" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/html/rich_editor.html" />
+        <option value="$PROJECT_DIR$/html/table.html" />
+        <option value="$PROJECT_DIR$/component/multi_image_upload.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/html/multi_image_upload.html" />
       </list>
     </option>
   </component>
@@ -169,6 +180,11 @@
             <path>
               <item name="layuiAdmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="layuiAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="layuiAdmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="layuiAdmin" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -180,11 +196,6 @@
               <item name="layuiAdmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="layuiAdmin" type="462c0819:PsiDirectoryNode" />
               <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="layuiAdmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="layuiAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="kindeditor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,7 +247,7 @@
       <workItem from="1557802368250" duration="5393000" />
       <workItem from="1561534023005" duration="2528000" />
       <workItem from="1561622109670" duration="9044000" />
-      <workItem from="1561684525803" duration="5118000" />
+      <workItem from="1561684525803" duration="9930000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1557482738453</created>
@@ -350,11 +361,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561689786835</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="first commit">
+      <created>1561689994865</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1561689994866</updated>
+    </task>
+    <task id="LOCAL-00018" summary="first commit">
+      <created>1561690060033</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1561690060033</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28650000" />
+    <option name="totallyTimeSpent" value="33462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -428,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3220">
-          <caret line="140" column="18" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2093">
@@ -453,20 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="109" column="20" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/multi_image_upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="86" column="10" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="86" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -490,20 +494,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/rich_editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="391">
-            <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/rich_editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/multi_image_upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/multi_image_upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
         </state>
       </provider>
     </entry>

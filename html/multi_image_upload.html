@@ -10,80 +10,49 @@
 <button id="btn_upload">点击上传</button>
 </body>
 </html>
-<!--添加图片按钮-->
-<script id="addDivHtml" type="text/html">
-    <div class="addDiv" onclick="javascript:$('#file').click()">
-        <img src="../image/add.png">
-    </div>
-</script>
 <!--上传图片弹框 -->
 <script id="uploadDialog" type="text/html">
-    <div class="upload-image-list">
-        <input type="file" id="file" style="display: none;" onchange="onFileUpload()">
-        {{d.addHtml}}
-    </div>
+    <form class="layui-form" action="">
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">上传图片</label>
+            <div class="layui-input-block">
+                <input id="multi-upload" name="images">
+            </div>
+        </div>
+    </form>
+
+
 </script>
 <script src="../js/jquery.min.js"></script>
 <script src="../layui/layui.all.js"></script>
+<script src="../component/multi_image_upload.js"></script>
 <script>
-    var files=[];
-
-    /**
-     * 图片选择回调
-     */
-    function onFileUpload() {
-        console.log($('#file')[0].files[0]);
-        files.push($('#file')[0].files[0]);
-        var reads = new FileReader();
-        reads.readAsDataURL($('#file')[0].files[0]);
-        reads.onload = function () {
-            //this.result
-            $('.upload-image-list').html(
-                $('.upload-image-list').html().replace($('#addDivHtml').html(), '')
-                + `<div class="item">
-                    <img class="image" src="${this.result}"/>
-                    <img src="../image/delete.png" class="delete" onclick="deleteImg()">
-                </div>`
-                + $('#addDivHtml').html());
-        };
-
-    }
-
-    /**
-     * 删除图片
-     * @param index
-     */
-    function deleteImg(index){
-        index=0;
-        console.log(files);
-        files.splice(index,1);
-        $(`.upload-image-list .item`)[index].className="delItem";
-    }
-
-    layui.use(['layer', 'laytpl'], function () {
+    layui.use(['layer'], function () {
         window.layer = layui.layer;
-        window.laytpl = layui.laytpl;
         mounted();
     });
 
 
     function mounted() {
         $('#btn_upload').click(function () {
-            laytpl($('#uploadDialog').html()).render({addHtml: $('#addDivHtml').html()}, function (html) {
-                layer.open({
-                    title: '上传',
-                    type: 1,
-                    content: html,
-                    area: ['50%', '70%'],
-                    btn:['确定','取消'],
-                    yes:function (index, layero) {
+            layer.open({
+                title: '上传',
+                type: 1,
+                content: $('#uploadDialog').html(),
+                area: ['50%', '70%'],
+                btn:['确定','取消'],
+                success:function(){
+                    multiImageUpload.init('#multi-upload')
+                },
+                yes:function (index, layero) {
 
-                    },
-                    btn2:function (index,layero) {
+                },
+                btn2:function (index,layero) {
 
-                    }
-                })
-            });
+                }
+            })
         })
 
     }
