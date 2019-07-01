@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3369d3e4-2083-4c3e-91b6-a8560f923aae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/multi_image_upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/multi_image_upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/multi_image_upload.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/html/multi_image_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/multi_image_upload.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+            <state relative-caret-position="383">
+              <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -41,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="2208">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
@@ -50,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/rich_editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="437">
               <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
             </state>
           </provider>
@@ -68,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/multi_image_upload.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+            <state relative-caret-position="299">
+              <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -80,17 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="2944">
               <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/component/multi_image_upload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -151,8 +142,8 @@
         <option value="$PROJECT_DIR$/html/rich_editor.html" />
         <option value="$PROJECT_DIR$/html/table.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/html/multi_image_upload.html" />
         <option value="$PROJECT_DIR$/component/multi_image_upload.js" />
+        <option value="$PROJECT_DIR$/html/multi_image_upload.html" />
       </list>
     </option>
   </component>
@@ -236,7 +227,8 @@
       <workItem from="1557802368250" duration="5393000" />
       <workItem from="1561534023005" duration="2528000" />
       <workItem from="1561622109670" duration="9044000" />
-      <workItem from="1561684525803" duration="16686000" />
+      <workItem from="1561684525803" duration="16996000" />
+      <workItem from="1561942783967" duration="3942000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1557482738453</created>
@@ -371,11 +363,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561701966046</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="first commit">
+      <created>1561717942368</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1561717942368</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40218000" />
+    <option name="totallyTimeSpent" value="44470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -435,24 +434,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/tableDemo.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2093">
-          <caret line="91" column="46" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -463,23 +448,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kindeditor/asp/demo.asp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/kindeditor/asp/demo.asp" />
     <entry file="file://$PROJECT_DIR$/kindeditor/kindeditor-all-min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -487,6 +456,27 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/rich_editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -500,38 +490,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/rich_editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="2944">
           <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/multi_image_upload.html">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+        <state relative-caret-position="2093">
+          <caret line="91" column="46" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/component/multi_image_upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+        <state relative-caret-position="437">
+          <caret line="22" column="11" lean-forward="true" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/multi_image_upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
         </state>
       </provider>
     </entry>
