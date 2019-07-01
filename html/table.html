@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<form class="layui-form">
+    <label>城市</label>
+    <div class="layui-input-inline">
+        <select name="city">
+            <option value=""></option>
+            <option value="0">北京</option>
+            <option value="1">上海</option>
+            <option value="2">广州</option>
+            <option value="3">深圳</option>
+            <option value="4">杭州</option>
+        </select>
+    </div>
+    <div class="layui-input-inline">
+        <button class="layui-btn layui-btn-sm" lay-submit lay-filter="formSearch">搜索</button>
+    </div>
+</form>
 <table id="demo" lay-filter="test"></table>
 </body>
 </html>
