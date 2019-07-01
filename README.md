@@ -16,3 +16,5 @@ https://ice13140167960.github.io/layuiAdmin/#/main.html
 ## 3.新增多图上传弹框
 
 ## 4.新增KindEditor富文本编辑器
+
+## 5.新增登录页面
