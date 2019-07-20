@@ -26,7 +26,7 @@
     <ul class="layui-nav layui-nav-tree"
         lay-filter="test">
         <li class="layui-nav-item"><a href="#/">首页</a></li>
-        <li class="layui-nav-item layui-nav-itemed">
+        <li class="layui-nav-item">
             <a>默认展开</a>
             <dl class="layui-nav-child">
                 <dd><a>选项1</a></dd>
@@ -37,7 +37,14 @@
         <li class="layui-nav-item">
             <a>解决方案</a>
             <dl class="layui-nav-child">
-                <dd><a href="">移动模块</a></dd>
+                <dd>
+                    <a>移动模块</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">移动模块</a></dd>
+                        <dd><a href="">后台模版</a></dd>
+                        <dd><a href="">电商平台</a></dd>
+                    </dl>
+                </dd>
                 <dd><a href="">后台模版</a></dd>
                 <dd><a href="">电商平台</a></dd>
             </dl>
@@ -91,9 +98,9 @@
 <script src="js/utils.js"></script>
 <script>
 
-    layui.use(['layer','form'],function () {
-        window.layer=layui.layer;
-        window.form=layui.form;
+    layui.use(['layer', 'form'], function () {
+        window.layer = layui.layer;
+        window.form = layui.form;
         mounted();
     });
 
@@ -122,7 +129,98 @@
         });
     }
 
+    /**
+     *格式化菜单数据
+     */
+     function formatMenus() {
+        findChildMenus(-1);
+    }
+
+    /**
+     * 根据id查找下级菜单
+     * @param id
+     */
+    function findChildMenus(id) {
+        if(id==-1){
+            menuArray.forEach(function (item) {
+                if(item.pid==id){
+                    $('.leftMenu ul')
+                        .append('<li menu-id="'+item.id+'" class="layui-nav-item"><a href="'+item.url+'">'+item.name+'</a></li>')
+                    findChildMenus(item.id);
+                }
+            });
+
+        }else{
+            menuArray.forEach(function (item) {
+                if(item.pid==id){
+                    console.log('[menu-id="'+item.pid+'"]');
+                    if(!$('[menu-id="'+item.pid+'"]').children('dl')[0]){
+                        $('[menu-id="'+item.pid+'"]').append('<dl class="layui-nav-child"></dl>')
+                    }
+                    console.log($('[menu-id="'+item.pid+'"]').children('dl')[0]);
+                    $('[menu-id="'+item.pid+'"] dl')
+                        .append('<dd><a href="'+item.url+'">'+item.name+'</a></dd>');
+                    findChildMenus(item.id);
+                }
+            });
+        }
+
+    }
+
+
     function mounted() {
+        //菜单列表数据
+        window.menuArray = [
+            {
+                name: "首页",
+                id: 0,
+                pid: -1,
+                url:'#/'
+            },
+            {
+                name: "默认展开",
+                id: 1,
+                pid: -1,
+                url:''
+            },
+            {
+                name: "解决方案",
+                id: 2,
+                pid: -1,
+                url:''
+            },
+            {
+                name: "表格",
+                id: 3,
+                pid: -1,
+                url:'#/table.html'
+            },
+            {
+                name: "多图上传",
+                id: 4,
+                pid: -1,
+                url:'#/multi_image_upload.html'
+            },
+            {
+                name: "富文本",
+                id: 5,
+                pid: -1,
+                url:'#/rich_editor.html'
+            },
+            {
+                name: "选项1",
+                id: 6,
+                pid: 1,
+                url:''
+            },
+            {
+                name: "选项2",
+                id: 7,
+                pid: 1,
+                url:''
+            },
+        ];
+        formatMenus();
         initRouter();
         //显示设置弹框
         $('.loginNameDiv').click(function () {
@@ -139,11 +237,11 @@
             layer.open({
                 type: 1,
                 content: `<div style="padding: 20px;">是否退出</div>`,
-                btn:["确定退出","暂不退出"],
-                yes:function (index, layero) {
-                    location.href="login.html";
+                btn: ["确定退出", "暂不退出"],
+                yes: function (index, layero) {
+                    location.href = "login.html";
                 },
-                btn2:function (index,layero) {
+                btn2: function (index, layero) {
                     //return false 开启该代码可禁止点击该按钮关闭
                 }
             });
