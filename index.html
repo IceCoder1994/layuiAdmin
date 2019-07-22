@@ -25,33 +25,6 @@
 <div class="leftMenu">
     <ul class="layui-nav layui-nav-tree"
         lay-filter="test">
-        <li class="layui-nav-item"><a href="#/">首页</a></li>
-        <li class="layui-nav-item">
-            <a>默认展开</a>
-            <dl class="layui-nav-child">
-                <dd><a>选项1</a></dd>
-                <dd><a>选项2</a></dd>
-                <dd><a>跳转</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a>解决方案</a>
-            <dl class="layui-nav-child">
-                <dd>
-                    <a>移动模块</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="">移动模块</a></dd>
-                        <dd><a href="">后台模版</a></dd>
-                        <dd><a href="">电商平台</a></dd>
-                    </dl>
-                </dd>
-                <dd><a href="">后台模版</a></dd>
-                <dd><a href="">电商平台</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item"><a href="index.html#/table.html">表格</a></li>
-        <li class="layui-nav-item"><a href="index.html#/multi_image_upload.html">多图上传</a></li>
-        <li class="layui-nav-item"><a href="index.html#/rich_editor.html">富文本</a></li>
     </ul>
 </div>
 <!--主要内容区-->
@@ -98,9 +71,10 @@
 <script src="js/utils.js"></script>
 <script>
 
-    layui.use(['layer', 'form'], function () {
+    layui.use(['layer', 'form','element'], function () {
         window.layer = layui.layer;
         window.form = layui.form;
+        window.element=layui.element;
         mounted();
     });
 
@@ -134,6 +108,7 @@
      */
      function formatMenus() {
         findChildMenus(-1);
+        window.element.render('nav');
     }
 
     /**
@@ -153,13 +128,12 @@
         }else{
             menuArray.forEach(function (item) {
                 if(item.pid==id){
-                    console.log('[menu-id="'+item.pid+'"]');
+                    $('[menu-id="'+item.pid+'"]>a').removeAttr('href');
                     if(!$('[menu-id="'+item.pid+'"]').children('dl')[0]){
                         $('[menu-id="'+item.pid+'"]').append('<dl class="layui-nav-child"></dl>')
                     }
-                    console.log($('[menu-id="'+item.pid+'"]').children('dl')[0]);
                     $('[menu-id="'+item.pid+'"] dl')
-                        .append('<dd><a href="'+item.url+'">'+item.name+'</a></dd>');
+                        .append('<dd menu-id="'+item.id+'"><a href="'+item.url+'">'+item.name+'</a></dd>');
                     findChildMenus(item.id);
                 }
             });
@@ -176,47 +150,45 @@
                 id: 0,
                 pid: -1,
                 url:'#/'
-            },
-            {
+            }, {
                 name: "默认展开",
                 id: 1,
                 pid: -1,
                 url:''
-            },
-            {
+            }, {
                 name: "解决方案",
                 id: 2,
                 pid: -1,
                 url:''
-            },
-            {
+            }, {
                 name: "表格",
                 id: 3,
                 pid: -1,
                 url:'#/table.html'
-            },
-            {
+            }, {
                 name: "多图上传",
                 id: 4,
                 pid: -1,
                 url:'#/multi_image_upload.html'
-            },
-            {
+            }, {
                 name: "富文本",
                 id: 5,
                 pid: -1,
                 url:'#/rich_editor.html'
-            },
-            {
+            }, {
                 name: "选项1",
                 id: 6,
                 pid: 1,
                 url:''
-            },
-            {
+            }, {
                 name: "选项2",
                 id: 7,
                 pid: 1,
+                url:''
+            },{
+                name: "选项2-2",
+                id: 8,
+                pid: 7,
                 url:''
             },
         ];
