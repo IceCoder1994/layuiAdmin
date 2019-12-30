@@ -115,13 +115,9 @@
 </script>
 <script src="../js/jquery.min.js"></script>
 <script src="../layui/layui.all.js"></script>
+<script src="../js/common.js"></script>
 <script>
-    layui.use(['table', 'layer','form'], function () {
-        window.table = layui.table;
-        window.layer = layui.layer;
-        window.form=layui.form;
-        mounted();
-    });
+    layuiModules=['table', 'layer','form'];
 
     function mounted() {
         //第一个实例

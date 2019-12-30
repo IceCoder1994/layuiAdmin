@@ -68,79 +68,10 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="layui/layui.all.js"></script>
-<script src="js/utils.js"></script>
+<script src="js/common.js"></script>
 <script>
 
-    layui.use(['layer', 'form','element'], function () {
-        window.layer = layui.layer;
-        window.form = layui.form;
-        window.element=layui.element;
-        mounted();
-    });
-
-    /**
-     * 类Vue路由设计，如不需要可删除
-     */
-    function initRouter() {
-        var url = window.location.href;
-        var router;
-        if (url.indexOf("#/") > -1) {
-            router = url.substring(url.indexOf('#/') + 2);
-            if (router === '') {
-                router = 'index.html';
-            }
-            $('#iframeParent').attr('src', 'html/' + router);
-        } else {
-            $('#iframeParent').attr('src', 'html/index.html');
-            history.replaceState(null, null, '#/');
-        }
-        //地址栏修改不刷新的解决方案
-        $('a').click(function () {
-            if ($(this).attr('href')) {
-                window.location.href = $(this).attr('href');
-                window.location.reload();
-            }
-        });
-    }
-
-    /**
-     *格式化菜单数据
-     */
-     function formatMenus() {
-        findChildMenus(-1);
-        window.element.render('nav');
-    }
-
-    /**
-     * 根据id查找下级菜单
-     * @param id
-     */
-    function findChildMenus(id) {
-        if(id==-1){
-            menuArray.forEach(function (item) {
-                if(item.pid==id){
-                    $('.leftMenu ul')
-                        .append('<li menu-id="'+item.id+'" class="layui-nav-item"><a href="'+item.url+'">'+item.name+'</a></li>')
-                    findChildMenus(item.id);
-                }
-            });
-
-        }else{
-            menuArray.forEach(function (item) {
-                if(item.pid==id){
-                    $('[menu-id="'+item.pid+'"]>a').removeAttr('href');
-                    if(!$('[menu-id="'+item.pid+'"]').children('dl')[0]){
-                        $('[menu-id="'+item.pid+'"]').append('<dl class="layui-nav-child"></dl>')
-                    }
-                    $('[menu-id="'+item.pid+'"] dl')
-                        .append('<dd menu-id="'+item.id+'"><a href="'+item.url+'">'+item.name+'</a></dd>');
-                    findChildMenus(item.id);
-                }
-            });
-        }
-
-    }
-
+    layuiModules=['layer', 'form','element'];
 
     function mounted() {
         //菜单列表数据
@@ -149,50 +80,51 @@
                 name: "首页",
                 id: 0,
                 pid: -1,
-                url:'#/'
+                url: '#/'
             }, {
                 name: "默认展开",
                 id: 1,
                 pid: -1,
-                url:''
+                url: ''
             }, {
                 name: "解决方案",
                 id: 2,
                 pid: -1,
-                url:''
+                url: ''
             }, {
                 name: "表格",
                 id: 3,
                 pid: -1,
-                url:'#/table.html'
+                url: '#/table.html'
             }, {
                 name: "多图上传",
                 id: 4,
                 pid: -1,
-                url:'#/multi_image_upload.html'
+                url: '#/multi_image_upload.html'
             }, {
                 name: "富文本",
                 id: 5,
                 pid: -1,
-                url:'#/rich_editor.html'
+                url: '#/rich_editor.html'
             }, {
                 name: "选项1",
                 id: 6,
                 pid: 1,
-                url:''
+                url: ''
             }, {
                 name: "选项2",
                 id: 7,
                 pid: 1,
-                url:''
-            },{
+                url: ''
+            }, {
                 name: "选项2-2",
                 id: 8,
                 pid: 7,
-                url:''
+                url: ''
             },
         ];
         formatMenus();
+        //初始化类vue路由
         initRouter();
         //显示设置弹框
         $('.loginNameDiv').click(function () {
@@ -241,6 +173,46 @@
                 }
             });
         });
+    }
+
+
+
+    /**
+     *格式化菜单数据
+     */
+    function formatMenus() {
+        findChildMenus(-1);
+        window.element.render('nav');
+    }
+
+    /**
+     * 根据id查找下级菜单
+     * @param id
+     */
+    function findChildMenus(id) {
+        if (id == -1) {
+            menuArray.forEach(function (item) {
+                if (item.pid == id) {
+                    $('.leftMenu ul')
+                        .append('<li menu-id="' + item.id + '" class="layui-nav-item"><a href="' + item.url + '">' + item.name + '</a></li>')
+                    findChildMenus(item.id);
+                }
+            });
+
+        } else {
+            menuArray.forEach(function (item) {
+                if (item.pid == id) {
+                    $('[menu-id="' + item.pid + '"]>a').removeAttr('href');
+                    if (!$('[menu-id="' + item.pid + '"]').children('dl')[0]) {
+                        $('[menu-id="' + item.pid + '"]').append('<dl class="layui-nav-child"></dl>')
+                    }
+                    $('[menu-id="' + item.pid + '"] dl')
+                        .append('<dd menu-id="' + item.id + '"><a href="' + item.url + '">' + item.name + '</a></dd>');
+                    findChildMenus(item.id);
+                }
+            });
+        }
+
     }
 
 

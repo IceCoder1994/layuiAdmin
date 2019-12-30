@@ -16,17 +16,13 @@
 </script>
 <script src="../js/jquery.min.js"></script>
 <script src="../layui/layui.all.js"></script>
-<script charset="utf-8" src="../kindeditor/kindeditor-all-min.js"></script>
-<script charset="utf-8" src="../kindeditor/lang/zh-CN.js"></script>
+<script src="../kindeditor/kindeditor-all-min.js"></script>
+<script src="../kindeditor/lang/zh-CN.js"></script>
+<script src="../js/common.js"></script>
 <script>
-    layui.use(['layer'], function () {
-        window.layer = layui.layer;
-        KindEditor.ready(function (K) {
-            window.K=K;
-            mounted();
-        });
 
-    });
+    layuiModules=['layer'];
+    useKindEditor=true;
     
     function mounted() {
         $('#btn_open').click(function () {
@@ -37,7 +33,7 @@
                 area: ['70%', '80%'],
                 btn:['确定','取消'],
                 success :function(){
-                    window.editor = K.create('#editor_id');
+                    window.editor = KindEditor.create('#editor_id');
                 },
                 yes:function (index, layero) {
 

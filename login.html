@@ -35,13 +35,10 @@
 </html>
 <script src="js/jquery.min.js"></script>
 <script src="layui/layui.all.js"></script>
-<script src="js/utils.js"></script>
+<script src="js/common.js"></script>
 <script>
-    layui.use(['layer','form'], function () {
-        window.layer = layui.layer;
-        window.form=layui.form;
-        mounted();
-    });
+
+    layuiModules=['layer','form'];
 
     function mounted(){
         $('#login-form').submit(function () {
